@@ -52,7 +52,8 @@ iframe {
 
 
 .container-login100 {
-  width: auto;  
+  width: auto;
+  margin: 1rem auto ;  
   height: auto;
   display: flex;
   flex-wrap: wrap;

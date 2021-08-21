@@ -1,3 +1,6 @@
+mat-drawer-container {
+    background: #FC9722;
+}
 .container {
     height: 100%;
 }
@@ -27,8 +30,12 @@ img {
     background: rgb(53, 47, 36);
 }
 
+.sidenav-content {
+    background: #FC9722;
+}
+
 .menu {
     margin: 1rem 0 0 1rem;
     color: white;
-    background: #FC9722;
+    background: #666666;;
 }
