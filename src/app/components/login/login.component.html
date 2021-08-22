@@ -51,7 +51,7 @@
                     Cadastro
                 </button></a>
 
-                <button [disabled]="!validaCampos()" class="login101-form-btn">
+                <button (click)="logar()" [disabled]="!validaCampos()" class="login101-form-btn">
                     Entrar
                 </button>
             </div>

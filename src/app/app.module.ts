@@ -32,6 +32,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { SolicitacaoComponent } from './components/solicitacao/solicitacao.component';
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { LoginComponent } from './components/login/login.component';
+import { Toast, ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { LoginComponent } from './components/login/login.component';
     NavComponent,
     SolicitacaoComponent,
     ClienteListComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +65,13 @@ import { LoginComponent } from './components/login/login.component';
     MatTableModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    ToastrModule.forRoot({
+      timeOut: 4000,
+      closeButton: true,
+      progressBar: true,
+      positionClass: 'toast-bottom-left'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
