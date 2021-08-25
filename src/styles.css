@@ -5,6 +5,8 @@ html, body { height: 100%;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .mat-typography{
+    margin: auto;
     background: #FC9722;
     height: auto;
 }
+

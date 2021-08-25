@@ -64,44 +64,22 @@ iframe {
   background: #FC9722;
 }
 
-.form-check input {
-  display: none;
-  color: #666666;
-  border-radius: 12px;
-  height: 15px; 
-  width: 15px;
-
-}
 
 .form-check {
   display: flex;
-  justify-content: space-between;
-}
-
-.form-check input + label:before {
-  content: '';
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background-color: white;
-  border: 1px solid gray;
-  vertical-align: middle;
-  display: inline-block;
-  margin-right: 8px;
-  margin-bottom: 3px;
-  margin: 0 auto;
-}
-
-.form-check input:checked + label:before  {
-  background-color: white;
-  box-sizing: border-box;
-  border: 5px solid #FC9722;
+  justify-content: start;
 }
 
 .form-check-label {
   font-family: Poppins-Medium;
   color: #666666;
   font-weight: 900;
+  display: flex;
+  align-items: center;
+}
+
+.show:focus {
+  color: #57b846;
 }
 
 /*------------------------------------------------------------------
@@ -180,15 +158,14 @@ iframe {
   padding-top: 15px;
 }
 
-.login100-form-btn:hover, .login101-form-btn:hover, .login102-form-btn:hover, .login103-form-btn:hover {
-  background: #333333;
-}
 
 .login101-form-btn {
 font-size: 12px;
 line-height: 1.5;
 color: #fff;
 text-transform: uppercase;
+font-weight: 700;
+box-shadow: 0 5px 0 #165a0a;
 
 height: 50px;
 border-radius: 25px;
@@ -201,65 +178,58 @@ padding: 0 25px;
 
 }
 
-.login102-form-btn {
-  font-family: Montserrat-Bold;
-  font-size: 12px;
-  line-height: 1.5;
-  color: #fff;
-  text-transform: uppercase;
-
-
-  height: 50px;
-  border-radius: 25px;
-  background: #C70303;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 0 25px;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.login102-form-btn:hover {
+.login101-form-btn:hover {
   background: #333333;
+  box-shadow: 0 5px 0 #000000;
 }
 
-.login103-form-btn {
-  font-family: Montserrat-Bold;
-  font-size: 12px;
-  line-height: 1.5;
-  color: #fff;
-  text-transform: uppercase;
-
-
-  height: 50px;
-  border-radius: 25px;
-  background: #57b846;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 0 25px;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
+.login101-form-btn:active {
+  position: relative;
+  top: 5px;
+  box-shadow: none;
 }
 
-.login103-form-btn:hover {
-  background: #333333;
+.login101-form-btn:disabled {
+  background: #9aa198;
+  box-shadow: none;
 }
+
+  .login100-form-btn {
+    font-size: 12px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    box-shadow: 0 5px 0 #040964;
+  
+  
+    height: 50px;
+    border-radius: 25px;
+    background: #0F159C;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    justify-content: start;
+    align-items: center;
+    padding: 0 25px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  }
+  
+  .login100-form-btn:hover {
+    background: #333333;
+    box-shadow: 0 5px 0 #000000;
+  }
+  
+  .login100-form-btn:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+  }
 
 /*------------------------------------------------------------------
 [ Alert validate ]*/
@@ -333,13 +303,14 @@ padding: 0 25px;
 
 .txt2 {
     font-family: Bold;
+    font-weight: 700;
     line-height: 1.5;
     color: #1126EA;
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 30px;
+    padding-top: 60px;
   }
   
   .txt2:hover {
@@ -478,35 +449,6 @@ padding: 0 25px;
   }
   
   
-  
-  /*------------------------------------------------------------------
-  [ Button ]*/
-  
-  .login100-form-btn {
-    font-size: 12px;
-    line-height: 1.5;
-    color: #fff;
-    text-transform: uppercase;
-  
-  
-    height: 50px;
-    border-radius: 25px;
-    background: #0F159C;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    justify-content: start;
-    align-items: center;
-    padding: 0 25px;
-  
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    -moz-transition: all 0.4s;
-    transition: all 0.4s;
-  }
-  
-  
   /*------------------------------------------------------------------
   [ Responsive ]*/
   
@@ -539,13 +481,12 @@ padding: 0 25px;
       margin: 0 auto;
     }
   
-    .img2 {
-      display: flex;
-      justify-content: end;
-      /* padding: 40px 80px 33px 80px; */
-    }
-  
+
     .img1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
       width: 100px;
       height: 100px;
       /* padding: 40px 80px 33px 80px; */
@@ -558,11 +499,11 @@ padding: 0 25px;
     }
     
     .txt4 {
-      font-size: 13px;
+      font-size: 16px;
     }
   
     .txt5 {
-      font-size: 11px;
+      font-size: 13px;
     }
   
     .login100-form-title {

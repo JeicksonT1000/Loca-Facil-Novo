@@ -16,7 +16,8 @@ export class LoginComponent implements OnInit {
     email: '',
     senha: ''
   }
-
+  hide = true;
+  
   email = new FormControl(null, Validators.email);
   senha = new FormControl(null, Validators.minLength(3));
 
@@ -29,6 +30,7 @@ export class LoginComponent implements OnInit {
   }
 
   logar() {
+    // debugger;
     this.service.authenticate(this.creds).subscribe(resposta => {
       this.service.successfullLogin(resposta.headers.get('Authorization').substring(7));
       this.router.navigate([''])
@@ -40,5 +42,4 @@ export class LoginComponent implements OnInit {
   validaCampos(): boolean {
     return this.email.valid && this.senha.valid
   }
-
 }

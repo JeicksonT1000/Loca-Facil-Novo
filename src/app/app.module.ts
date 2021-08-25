@@ -33,6 +33,7 @@ import { SolicitacaoComponent } from './components/solicitacao/solicitacao.compo
 import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { Toast, ToastrModule } from 'ngx-toastr';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { Toast, ToastrModule } from 'ngx-toastr';
     SolicitacaoComponent,
     ClienteListComponent,
     LoginComponent,
+    CadastroComponent,
   ],
   imports: [
     BrowserModule,
