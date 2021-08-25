@@ -34,6 +34,7 @@ import { ClienteListComponent } from './components/cliente/cliente-list/cliente-
 import { LoginComponent } from './components/login/login.component';
 import { Toast, ToastrModule } from 'ngx-toastr';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { RedefinirComponent } from './components/redefinir/redefinir.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
     ClienteListComponent,
     LoginComponent,
     CadastroComponent,
+    RedefinirComponent,
   ],
   imports: [
     BrowserModule,
