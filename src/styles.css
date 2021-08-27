@@ -7,6 +7,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-typography{
     margin: auto;
     background: #FC9722;
-    height: auto;
+    height: 0 auto 0 auto;
 }
 

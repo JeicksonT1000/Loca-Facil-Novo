@@ -52,9 +52,8 @@ iframe {
 
 
 .container-login100 {
-  width: auto;
-  margin: 3rem auto ;  
-  height: 100%;
+  width: auto;  
+  height: 90%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -527,7 +526,7 @@ padding: 0 25px;
   
   @media (max-width: 576px) {
     .wrap-login100 {
-      padding: 20px 15px 33px 15px;
+      padding: 20px 15px 20px 15px;
     }
   
   }
@@ -535,7 +534,7 @@ padding: 0 25px;
   @media (max-width: 414px) {
     .wrap-login100 {
       height: 600px;
-      padding: 20px 15px 33px 15px;
+      padding: 20px 15px 20px 15px;
     }
   
   }

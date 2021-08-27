@@ -26,8 +26,8 @@ img {
     margin-right: .6rem;
 }
 
-.mat-list-item:focus {
-    background: rgb(53, 47, 36);
+.colorFocus:hover {
+    background-color: rgb(53, 47, 36);
 }
 
 .sidenav-content {

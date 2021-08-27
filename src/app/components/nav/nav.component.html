@@ -1,20 +1,20 @@
 <mat-drawer-container class="container" autosize>
-    <mat-drawer #drawer class="sidenav" mode="side">
+    <mat-drawer #drawer class="sidenav" mode="over">
         <img src="assets/img/imagen-nav.svg" alt="Imagem de navegação">
         <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="solicitacao">
+            <a class="colorFocus" mat-list-item routerLink="solicitacao">
                 <i class="material-icons">home</i>
                 Solicitação
             </a>
-            <a mat-list-item routerLink="clientManager">
+            <a class="colorFocus" mat-list-item routerLink="clientManager">
                 <i class="material-icons">fact_check</i>
                 Gerenciamento
             </a>
-            <a mat-list-item routerLink="/">
+            <a class="colorFocus"mat-list-item routerLink="/">
                 <i class="material-icons">assignment</i>
                 Gerenciamento
             </a>
-            <a mat-list-item (click)="logout()">
+            <a class="colorFocus" mat-list-item (click)="logout()">
                 <i class="material-icons">logout</i>
                 Sair
             </a>
