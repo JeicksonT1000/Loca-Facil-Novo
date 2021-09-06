@@ -235,6 +235,11 @@ padding: 0 25px;
     box-shadow: none;
   }
 
+  .login103-form-btn:disabled {
+    background: #9aa198;
+    box-shadow: none;
+  }
+
   .form-check {
     display: flex;
     justify-content: start;

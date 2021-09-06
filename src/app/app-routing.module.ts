@@ -11,7 +11,7 @@ import { SolicitacaoComponent } from './components/solicitacao/solicitacao.compo
 const routes: Routes = [
   
   { path: 'login', component: LoginComponent },
-  {path: 'cadastro', component: CadastroComponent},
+  {path: 'createuser', component: CadastroComponent},
   { path: 'redefinirSenha', component: RedefinirComponent },
 
   {
