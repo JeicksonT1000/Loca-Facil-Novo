@@ -36,6 +36,7 @@ import { LoginComponent } from './components/login/login.component';
 import { Toast, ToastrModule } from 'ngx-toastr';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { RedefinirComponent } from './components/redefinir/redefinir.component';
+import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -79,7 +80,7 @@ import { RedefinirComponent } from './components/redefinir/redefinir.component';
       positionClass: 'toast-bottom-left'
     })
   ],
-  providers: [],
+  providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
