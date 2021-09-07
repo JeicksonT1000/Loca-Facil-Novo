@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+import { CreateUser } from 'src/app/models/createUser';
+import { CreateuserService } from 'src/app/services/createuser.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -8,6 +11,13 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class CadastroComponent implements OnInit {
 
+  cliente: CreateUser = {
+    iduser: '',
+    name: '',
+    email: '',
+    password: ''
+  }
+
   hide = true;
 
   nome = new FormControl(null, Validators.minLength(3));
@@ -15,12 +25,23 @@ export class CadastroComponent implements OnInit {
   senha = new FormControl(null, Validators.minLength(8));
 
 
-  constructor() { }
+  constructor(
+    private service: CreateuserService,
+    private  toast: ToastrService
+  ) { }
 
   ngOnInit(): void {
   }
 
   validaCampos(): boolean {
     return this.nome.valid && this.email.valid && this.senha.valid
+  }
+
+  create(): void {
+    this.service.create(this.cliente).subscribe(() => {
+      this.toast.success('Cadastro realizado com sucesso', 'Cadastro')
+    }, ex => {
+      this.toast.error('Erro ao cadastrar, verifique os dados. Tente novamente.', 'Falha ao realizar Cadastro!')
+    })
   }
 }
