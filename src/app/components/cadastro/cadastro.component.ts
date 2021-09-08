@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CreateUser } from 'src/app/models/createUser';
 import { CreateuserService } from 'src/app/services/createuser.service';
@@ -27,7 +28,8 @@ export class CadastroComponent implements OnInit {
 
   constructor(
     private service: CreateuserService,
-    private  toast: ToastrService
+    private  toast: ToastrService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -39,9 +41,10 @@ export class CadastroComponent implements OnInit {
 
   create(): void {
     this.service.create(this.cliente).subscribe(() => {
-      this.toast.success('Cadastro realizado com sucesso', 'Cadastro')
+      this.toast.success('Cadastro realizado com sucesso', 'Cadastro');
+      this.router.navigate(['login']);
     }, ex => {
-      this.toast.error('Erro ao cadastrar, verifique os dados. Tente novamente.', 'Falha ao realizar Cadastro!')
+      this.toast.error('Erro ao cadastrar, verifique os dados. Tente novamente.', 'Falha ao realizar Cadastro!');
     })
   }
 }
